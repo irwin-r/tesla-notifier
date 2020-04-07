@@ -1,7 +1,7 @@
 service: tesla-notifier
 
-app: ${env:SERVERLESS_APP}
-org: ${env:SERVERLESS_ORG}
+app: tesla-notifier
+org: irwin
 
 custom:
   bucket: tesla-notifier

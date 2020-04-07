@@ -20,6 +20,4 @@ jobs:
         EMAIL_SOURCE: ${{ secrets.EMAIL_CC }}
         EMAIL_TO: ${{ secrets.EMAIL_CC }}
         SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
-        SERVERLESS_APP: ${{ secrets.SERVERLESS_APP }}
-        SERVERLESS_ORG: ${{ secrets.SERVERLESS_ORG }}
         SMS_TO: ${{ secrets.SMS_TO }}
