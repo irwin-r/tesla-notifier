@@ -5,12 +5,9 @@ org: irwin
 
 custom:
   bucket: tesla-notifier
-  region: ${opt:region, 'ap-southeast-2'}
 
 provider:
   name: aws
-  region: ${self:custom.region}
-  endpoint: 'cloudformation.${self:custom.region}.amazonaws.com'
   runtime: nodejs12.x
   iamRoleStatements:
     - Effect: Allow
@@ -32,7 +29,7 @@ functions:
       - schedule: rate(1 minute)
     environment:
       BUCKET: ${self:custom.bucket}
-      REGION: ${self:custom.region}
+      REGION: ${opt.region}
       EMAIL_SOURCE: ${env:EMAIL_SOURCE}
       EMAIL_TO: ${env:EMAIL_TO}
       EMAIL_CC: ${env:EMAIL_CC}
