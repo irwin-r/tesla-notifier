@@ -12,6 +12,7 @@ jobs:
     - uses: actions/setup-node@master
       with:
         args: install
+    - run: npm install
     - uses: serverless/github-action@master
       with:
         args: deploy --region ap-southeast-2
