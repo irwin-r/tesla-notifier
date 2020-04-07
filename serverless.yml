@@ -1,8 +1,5 @@
 service: tesla-notifier
 
-app: tesla-notifier
-org: irwin
-
 custom:
   bucket: tesla-notifier
 

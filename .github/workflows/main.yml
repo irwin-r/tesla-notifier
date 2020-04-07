@@ -1,8 +1,10 @@
+name: Deploy master branch
+
 on:
   push:
-    branches:
-      - master
-name: Deploy master branch
+  branches:
+  - master
+
 jobs:
   deploy:
     name: deploy
@@ -16,8 +18,9 @@ jobs:
       with:
         args: deploy --region ap-southeast-2
       env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         EMAIL_CC: ${{ secrets.EMAIL_CC }}
         EMAIL_SOURCE: ${{ secrets.EMAIL_CC }}
         EMAIL_TO: ${{ secrets.EMAIL_CC }}
-        SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         SMS_TO: ${{ secrets.SMS_TO }}
