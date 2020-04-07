@@ -26,7 +26,6 @@ functions:
       - schedule: rate(1 minute)
     environment:
       BUCKET: ${self:custom.bucket}
-      REGION: ${opt:region}
       EMAIL_SOURCE: ${env:EMAIL_SOURCE}
       EMAIL_TO: ${env:EMAIL_TO}
       EMAIL_CC: ${env:EMAIL_CC}

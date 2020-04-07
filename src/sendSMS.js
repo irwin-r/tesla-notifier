@@ -1,8 +1,8 @@
 const aws = require("aws-sdk");
 
-const { REGION, SMS_TO } = process.env;
+const { SMS_TO } = process.env;
 
-const sns = new aws.SNS({ region: REGION });
+const sns = new aws.SNS();
 
 module.exports = async () =>
   sns

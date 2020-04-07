@@ -1,9 +1,9 @@
 const aws = require("aws-sdk");
 const { formatEmailBody, formatResult } = require("./formatters");
 
-const { EMAIL_CC, EMAIL_SOURCE, EMAIL_TO, REGION } = process.env;
+const { EMAIL_CC, EMAIL_SOURCE, EMAIL_TO } = process.env;
 
-const ses = new aws.SES({ region: REGION });
+const ses = new aws.SES();
 
 module.exports = async ({ added, updated }) => {
   const params = {

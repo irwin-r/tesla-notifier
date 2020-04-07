@@ -1,8 +1,8 @@
 const aws = require("aws-sdk");
 
-const { BUCKET, REGION } = process.env;
+const { BUCKET } = process.env;
 
-const s3 = new aws.S3({ region: REGION });
+const s3 = new aws.S3();
 
 const DATABASE_FILE_NAME = "records.json";
 
