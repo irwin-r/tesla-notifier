@@ -5,11 +5,12 @@ org: irwin
 
 custom:
   bucket: tesla-notifier
-  region: ap-southeast-2
+  region: ${opt:region, 'ap-southeast-2'}
 
 provider:
   name: aws
   region: ${self:custom.region}
+  endpoint: 'cloudformation.${self:custom.region}.amazonaws.com'
   runtime: nodejs12.x
   iamRoleStatements:
     - Effect: Allow
