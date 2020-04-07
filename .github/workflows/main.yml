@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: actions/npm@master
+    - uses: actions/setup-node@master
       with:
         args: install
     - uses: serverless/github-action@master
